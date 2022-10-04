@@ -181,7 +181,7 @@ const submit = async () => {
   showloadingModal.value = !showloadingModal.value;
   // Making f etch request
   const response = await fetch(
-    "https://formsubmit.co/ajax/isfhan729@gmail.com",
+    "https://formsubmit.co/ajax/d7c40a0c8196aef35839125439a93ad9",
     {
       method: "POST",
       headers: {
