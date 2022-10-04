@@ -30,6 +30,13 @@
         >
           contact me
         </button>
+        <button
+          @click="showAboutModal = !showAboutModal"
+          class="action-btn about-btn"
+          role="button"
+        >
+          about me
+        </button>
       </div>
       <ul class="icons">
         <li>
@@ -38,10 +45,14 @@
           /></a>
         </li>
         <li>
-          <a target="blank" href="https://www.linkedin.com/in/isfhan/"><img :src="linkedinIcon" alt="" /></a>
+          <a target="blank" href="https://www.linkedin.com/in/isfhan/"
+            ><img :src="linkedinIcon" alt=""
+          /></a>
         </li>
         <li>
-          <a target="blank" href="https://github.com/Isfhan"><img :src="githubIcon" alt="" /></a>
+          <a target="blank" href="https://github.com/Isfhan"
+            ><img :src="githubIcon" alt=""
+          /></a>
         </li>
       </ul>
     </div>
@@ -121,16 +132,38 @@
         </div>
       </div>
     </div>
+
+    <div v-if="showAboutModal" class="modal">
+      <div @click="closeAboutModal" class="wrapper">
+        <div class="content">
+          <h1 class="heading">about me</h1>
+          <p class="text">
+            I am a full-stack developer. I mainly use PHP, JavaScript, Laravel,
+            Python and many other frameworks and libraries related to these
+            technologies. I have a love for Machine Learning, Data Science and
+            Artificial Intelligence. I am also learning Artificial Intelligence
+            from UIT. I love Computer Vision and want to be a part of Computer
+            Vision industry in future. I am currently working on Shopware plugin
+            development and other backend tasks, but I can also work on the
+            front-end. I love developing projects from scratch. I have worked a
+            lot with PHP and JavaScript. Besides front-end and back-end
+            programming, I am also passionate about giving talks and sharing my
+            knowledge. I have a YouTube channel where I post videos about
+            developer life.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 // Importing things we need
-import headerImage from "../static/Navimg.svg";
-import facebookIcon from "../static/facebook.svg";
-import linkedinIcon from "../static/linkedin.svg";
-import githubIcon from "../static/github.svg";
-import checkIcon from "../static/check.svg";
+import headerImage from "../assets/Navimg.svg";
+import facebookIcon from "../assets/facebook.svg";
+import linkedinIcon from "../assets/linkedin.svg";
+import githubIcon from "../assets/github.svg";
+import checkIcon from "../assets/check.svg";
 import { ref } from "vue";
 
 // Varaibles
@@ -140,6 +173,7 @@ const message = ref("");
 const showFormModal = ref(false);
 const showNotificationModal = ref(false);
 const showloadingModal = ref(false);
+const showAboutModal = ref(false);
 
 // Functions
 const submit = async () => {
@@ -176,6 +210,10 @@ const closeModal = (e) => {
   if (!e.target.classList.contains("wrapper")) return;
   showFormModal.value = !showFormModal.value;
 };
+const closeAboutModal = (e) => {
+  if (!e.target.classList.contains("wrapper")) return;
+  showAboutModal.value = !showAboutModal.value;
+};
 </script>
 
 <style >
@@ -194,7 +232,7 @@ body {
 
 .header {
   position: relative;
-  background: url("~static/isfhan.jpg");
+  background: url("~assets/isfhan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -300px;
@@ -270,6 +308,13 @@ body {
   background: transparent;
   padding: 10px 20px;
   transition: 0.3s linear;
+  min-width: 150px;
+}
+.landing > .button > .about-btn {
+  background: #6b0504;
+  color: #fff;
+  min-width: 150px;
+  margin-left: 10px;
 }
 
 .landing > .button > .action-btn:hover {
@@ -360,6 +405,24 @@ body {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  max-width: 500px;
+}
+
+.modal > .wrapper > .content > .text {
+  font-size: 20px;
+  padding: 20px 0px;
+  font-weight: 200;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+}
+.modal > .wrapper > .content > .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-transform: capitalize;
 }
 
 .modal > .wrapper > .content > .message {
