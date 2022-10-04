@@ -217,7 +217,7 @@ const closeAboutModal = (e) => {
 </script>
 
 <style >
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;700&family=Peralta&display=swap");
+
 
 * {
   padding: 0;
@@ -269,7 +269,7 @@ body {
 
 .landing > .heading {
   font-size: 3rem;
-  font-family: "Peralta", cursive;
+  font-family: "Outfit", sans-serif;
   text-transform: capitalize;
   color: #222;
 }
@@ -360,7 +360,7 @@ body {
 
 .modal > .wrapper .form > .heading {
   font-size: 1.5rem;
-  font-family: "Peralta", cursive;
+  font-family: "Outfit", sans-serif;
   text-transform: capitalize;
   color: #222;
   text-align: center;
