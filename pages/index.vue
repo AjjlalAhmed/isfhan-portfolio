@@ -244,7 +244,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: #6b0604d1;
+  background: #24385bdf;
 }
 
 .header-img {
@@ -276,9 +276,9 @@ body {
 .landing > .sub-heading {
   font-size: 1.5rem;
   text-transform: capitalize;
-  color: #fff;
+  color: #24385B;
   text-transform: capitalize;
-  background: #6b0504;
+  background: #FFEA00;
   display: inline-block;
   padding: 10px 20px;
   margin: 10px 0px;
@@ -301,8 +301,8 @@ body {
   font-weight: 400;
   position: relative;
   overflow: hidden;
-  border: 2px solid #6b0504;
-  color: #6b0504;
+  border: 2px solid #24385B;
+  color: #24385B;
   text-decoration: none;
   cursor: pointer;
   background: transparent;
@@ -311,14 +311,14 @@ body {
   min-width: 150px;
 }
 .landing > .button > .about-btn {
-  background: #6b0504;
+  background: #24385B;
   color: #fff;
   min-width: 150px;
   margin-left: 10px;
 }
 
 .landing > .button > .action-btn:hover {
-  background: #6b0504;
+  background: #24385B;
   color: #fff;
 }
 .icons {
@@ -395,8 +395,8 @@ body {
   background: transparent;
   color: #fff;
   transition: 0.3s ease;
-  border: 2px solid #6b0504;
-  background: #6b0504;
+  border: 2px solid #24385B;
+  background: #24385B;
   padding: 10px;
 }
 
@@ -436,8 +436,8 @@ body {
   font-weight: 400;
   position: relative;
   overflow: hidden;
-  border: 2px solid #6b0504;
-  color: #6b0504;
+  border: 2px solid #24385B;
+  color: #24385B;
   text-decoration: none;
   cursor: pointer;
   background: transparent;
